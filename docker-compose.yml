@@ -1,0 +1,25 @@
+version: '3'
+
+services: 
+  
+  db_test:
+    container_name: postgres_db_test 
+    image: 'postgres:latest'
+    restart: always
+    environment: 
+      POSTGRES_PASSWORD: test
+      POSTGRES_USER: test
+      POSTGRES_DB: test
+    ports: 
+      - "5432:5432"
+
+  # db_dev:
+  #   container_name: postgres_db_dev
+  #   image: 'postgres:latest'
+  #   restart: always
+  #   environment: 
+  #     POSTGRES_PASSWORD: dev
+  #     POSTGRES_USER: dev
+  #     POSTGRES_DB: dev
+  #   ports: 
+  #     - "5432:5432"
